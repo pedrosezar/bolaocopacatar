@@ -1,0 +1,49 @@
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+		
+<style>	
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700');
+.msg{
+	display: block;
+    background: #de6d6d;
+    border-radius: 5px;
+    padding: 10px;
+    border: solid 1px #d74e4e;
+    color: #7f2e2e;
+    font-weight: 600;
+	margin:5px auto;
+	font-family: 'Roboto', sans-serif;
+	}
+	
+.msg.sucesso{
+	background:rgba(14, 133, 14);
+    border-color: #669866;
+    color: #ddd;
+}
+.msg .fa-times{
+	float:right;
+	text-decoration:none
+}
+.msg.sucesso .fa-times{
+    color: #54d754;
+}	
+.msg.erro{
+	background: #ed4f4f;
+    border-color: #967272;
+    color: #9a1032;
+}
+.msg.erro .fa-times{
+    color: #6e1e1e;
+}
+.msg.info{
+	background: #aed8e6;
+    border-color: #5899af;
+    color: #5594a9;
+}
+.msg.info .fa-times{
+    color: #5594a9;
+}	
+</style>
+
+<div>
+	<span class="msg <?= $msg->classe; ?>"><i class="fas <?= $msg->icone; ?>"></i> <?= $msg->msg; ?><a href="javascript:;" onclick="fecharMsg()" class="fas fa-times float-right"></a></span>
+</div>
